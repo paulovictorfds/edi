@@ -16,15 +16,22 @@ struct arraylist* inicializar(int capacidade) {
 }
 
 int obterElementoEmPosicao(struct arraylist* lista, int posicao) {
-    //TODO
+    if (posicao >= 0 && posicao < lista->qtdade) {
+        return lista->vetor[posicao];
+    }
 }
 
 void duplicarCapacidade(struct arraylist* lista) {
-    //TODO
+    lista->vetor = (int*)realloc(lista->vetor, 2 * lista->capacidade * sizeof(int));
+    lista->capacidade = 2 * lista->capacidade;
 }
 
 void inserirElementoNoFim(struct arraylist* lista, int valor) {
-    //TODO
+    if (lista->qtdade == lista->capacidade) {
+        duplicarCapacidade(lista);
+    }
+    lista->vetor[lista->qtdade] = valor;
+    lista->qtdade++;
 }
 
 void inserirElementoEmPosicao(struct arraylist* lista, int valor, int posicao) {

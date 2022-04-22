@@ -4,7 +4,7 @@
 //Para Linux:
 //#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/arraylist.h"
+#include "../src/listas/arraylist.h"
 #include <math.h>
 
 class ArrayListTest : public ::testing::Test {

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/runTestsArrayList.dir/testArrayList.cpp.o  -o runTestsArrayList  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

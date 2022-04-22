@@ -1,0 +1,7 @@
+[
+{
+  "directory": "/home/paulovictorfds/Projects/edi/build",
+  "command": "/usr/bin/g++    -g   -o CMakeFiles/edi.dir/edi.cpp.o -c /home/paulovictorfds/Projects/edi/edi.cpp",
+  "file": "/home/paulovictorfds/Projects/edi/edi.cpp"
+}
+]

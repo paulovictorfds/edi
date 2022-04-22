@@ -1,0 +1,2 @@
+/usr/bin/ar qc libedi.a  CMakeFiles/edi.dir/edi.cpp.o
+/usr/bin/ranlib libedi.a

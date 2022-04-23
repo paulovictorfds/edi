@@ -2,7 +2,7 @@
 #include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
 #include "../src/listas/arraylist.h"
 #include <math.h>

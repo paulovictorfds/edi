@@ -16,6 +16,7 @@ int obterElementoEmPosicao(int *lista, int posicao, int tamanho)
 
 // sempre que surgir a necessidade de reatribuição, como eh o caso de duplicarCapacidade
 // nós precisaremos de dereferencing, para que a variável original lista seja atualizada
+// passagem de parâmetros por referência
 // note que inserção é a operação que pode necessitar chamar duplicarCapacidade
 void duplicarCapacidade(int **lista, int *capacidade)
 {
@@ -28,40 +29,48 @@ void duplicarCapacidade(int **lista, int *capacidade)
 void inserirElementoNoFim(int **lista, int valor, int *tamanho, int *capacidade)
 {
 	if (*tamanho == *capacidade) {
-        duplicarCapacidade(lista, capacidade);
-    }
-    *lista[*tamanho] = valor;
-    *tamanho++;
+		duplicarCapacidade(lista, capacidade);
+	}
+	*lista[*tamanho] = valor;
+	*tamanho++;
 }
 
 void inserirElementoEmPosicao(int **lista, int valor, int posicao, int *tamanho, int *capacidade)
 {
 	if (posicao >= 0 && posicao <= *tamanho) {
-        if (*tamanho == *capacidade) {
-            duplicarCapacidade(lista, capacidade);
-        }
+		if (*tamanho == *capacidade) {
+			duplicarCapacidade(lista, capacidade);
+		}
 
-        for (int i = *tamanho; i > posicao; i--) {
-            *lista[i] = *lista[i - 1];
-        }
-        *lista[posicao] = valor;
-        *tamanho++;
-    }
+		for (int i = *tamanho; i > posicao; i--) {
+			*lista[i] = *lista[i - 1];
+		}
+		*lista[posicao] = valor;
+		*tamanho++;
+	}
 }
 
 void atualizarElemento(int *lista, int valor, int posicao, int tamanho)
 {
-	// TODO
+	if (posicao >= 0 && posicao < tamanho) {
+		lista[posicao] = valor;
+	}
 }
 
 void removerElementoNoFim(int *tamanho)
 {
-	// TODO
+	*tamanho--;
 }
 
 void removerElementoEmPosicao(int *lista, int posicao, int *tamanho)
 {
-	// TODO
+	if (posicao >= 0 && posicao < *tamanho) {
+		while (posicao < *tamanho - 1) {
+			lista[posicao] = lista[posicao + 1];
+			posicao++;
+		}
+		*tamanho--;
+	}
 }
 
 void exibirLista(int *lista, int *tamanho)

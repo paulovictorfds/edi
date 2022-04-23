@@ -19,6 +19,8 @@ gtest/gtest.h
 /home/paulovictorfds/Projects/edi/test/testArrayList.cpp
 pch.h
 /home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+-
 ../src/listas/arraylist.h
 /home/paulovictorfds/Projects/edi/src/listas/arraylist.h
 math.h

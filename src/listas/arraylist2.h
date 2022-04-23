@@ -35,7 +35,7 @@ void inserirElementoNoFim(struct arraylist* lista, int valor) {
 }
 
 void inserirElementoEmPosicao(struct arraylist* lista, int valor, int posicao) {
-    if (posicao >= 0 && posicao < lista->capacidade) {
+    if (posicao >= 0 && posicao <= lista->qtdade) {
         if (lista->qtdade == lista->capacidade) {
             duplicarCapacidade(lista);
         }
@@ -48,7 +48,7 @@ void inserirElementoEmPosicao(struct arraylist* lista, int valor, int posicao) {
 }
 
 void atualizarElemento(struct arraylist* lista, int valor, int posicao) {
-    if (posicao >= 0 && posicao < lista->capacidade) {
+    if (posicao >= 0 && posicao < lista->qtdade) {
         lista->vetor[posicao] = valor;
     }
 }
@@ -58,7 +58,7 @@ void removerElementoNoFim(struct arraylist* lista) {
 }
 
 void removerElementoEmPosicao(struct arraylist* lista, int posicao) {
-    if (posicao >= 0 && posicao < lista->capacidade) {
+    if (posicao >= 0 && posicao < lista->qtdade) {
         while (posicao < lista->qtdade - 1) {
             lista->vetor[posicao] = lista->vetor[posicao + 1];
             posicao++;

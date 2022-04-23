@@ -2,9 +2,9 @@
 #include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/arraylist2.h"
+#include "../src/listas/arraylist2.h"
 #include <math.h>
 
 class ArrayListTest2 : public ::testing::Test {

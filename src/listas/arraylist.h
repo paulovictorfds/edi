@@ -3,7 +3,7 @@
 
 void inicializar(int **lista, int capacidade)
 {
-	*lista = (int *)calloc(capacidade, sizeof(int));
+	(*lista) = (int *)calloc(capacidade, sizeof(int));
 }
 
 int obterElementoEmPosicao(int *lista, int posicao, int tamanho)
@@ -20,33 +20,33 @@ int obterElementoEmPosicao(int *lista, int posicao, int tamanho)
 // note que inserção é a operação que pode necessitar chamar duplicarCapacidade
 void duplicarCapacidade(int **lista, int *capacidade)
 {
-	*lista = (int *)realloc((*lista), 2 * (*capacidade) * sizeof(int));
-	*capacidade = (*capacidade) * 2;
+	(*lista) = (int *)realloc((*lista), 2 * (*capacidade) * sizeof(int));
+	(*capacidade) = (*capacidade) * 2;
 }
 
 // como eu não consigo dinamicamente saber a qtdade de elementos alocado para meu ponteiro de lista
 // então uso a variável capacidade para armazenar este valor
 void inserirElementoNoFim(int **lista, int valor, int *tamanho, int *capacidade)
 {
-	if (*tamanho == *capacidade) {
+	if ((*tamanho) == (*capacidade)) {
 		duplicarCapacidade(lista, capacidade);
 	}
-	*lista[*tamanho] = valor;
-	*tamanho++;
+	(*lista)[(*tamanho)] = valor;
+	(*tamanho)++;
 }
 
 void inserirElementoEmPosicao(int **lista, int valor, int posicao, int *tamanho, int *capacidade)
 {
-	if (posicao >= 0 && posicao <= *tamanho) {
-		if (*tamanho == *capacidade) {
+	if (posicao >= 0 && posicao <= (*tamanho)) {
+		if ((*tamanho) == (*capacidade)) {
 			duplicarCapacidade(lista, capacidade);
 		}
 
-		for (int i = *tamanho; i > posicao; i--) {
-			*lista[i] = *lista[i - 1];
+		for (int i = (*tamanho); i > posicao; i--) {
+			(*lista)[i] = (*lista)[i - 1];
 		}
-		*lista[posicao] = valor;
-		*tamanho++;
+		(*lista)[posicao] = valor;
+		(*tamanho)++;
 	}
 }
 
@@ -59,17 +59,17 @@ void atualizarElemento(int *lista, int valor, int posicao, int tamanho)
 
 void removerElementoNoFim(int *tamanho)
 {
-	*tamanho--;
+	(*tamanho)--;
 }
 
 void removerElementoEmPosicao(int *lista, int posicao, int *tamanho)
 {
-	if (posicao >= 0 && posicao < *tamanho) {
-		while (posicao < *tamanho - 1) {
+	if (posicao >= 0 && posicao < (*tamanho)) {
+		while (posicao < (*tamanho) - 1) {
 			lista[posicao] = lista[posicao + 1];
 			posicao++;
 		}
-		*tamanho--;
+		(*tamanho)--;
 	}
 }
 

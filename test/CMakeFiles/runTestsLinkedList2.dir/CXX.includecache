@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paulovictorfds/Projects/edi/src/listas/linkedlist.h
+stdlib.h
+-
+stdio.h
+-
+
+/home/paulovictorfds/Projects/edi/test/testLinkedList.cpp
+gtest/gtest.h
+-
+../src/listas/linkedlist.h
+/home/paulovictorfds/Projects/edi/src/listas/linkedlist.h
+math.h
+-
+

@@ -2,9 +2,9 @@
 #include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/linkedlist2.h"
+#include "../src/listas/linkedlist2.h"
 #include <math.h>
 
 class LinkedListTest2 : public ::testing::Test {

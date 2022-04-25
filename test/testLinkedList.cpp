@@ -1,10 +1,10 @@
 //Para Windows (MS Visual Studio):
-#include "pch.h"
+//#include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/linkedlist.h"
+#include "../src/listas/linkedlist.h"
 #include <math.h>
 
 class LinkedListTest : public ::testing::Test {

@@ -12,27 +12,59 @@ struct linkedlist {
 };
 
 struct linkedlist* inicializar() {
-    //TODO
+    struct linkedlist* lista = (struct linkedlist*)malloc(sizeof(struct linkedlist));
+    lista->qtdade = 0;
+    return lista;
 }
 
 struct no* alocarNovoNo(int valor) {
-    //TODO
+    struct no* node = (struct no*)malloc(sizeof(struct no));
+    node->val = valor;
+    node->prox = NULL;
+    return node;
 }
 
 void inserirElementoNoFim(struct linkedlist* lista, int valor) {
-    //TODO
+    struct no* tmp = alocarNovoNo(valor);
+    struct no* aux = lista->cabeca;
+    if (lista->qtdade == 0) {
+        lista->cabeca = tmp;
+    } else if (lista->qtdade > 0) {
+        while (aux->prox != NULL) {
+            aux = aux->prox;
+        }
+        aux->prox = tmp;
+    }
+    lista->qtdade++;
 }
 
 void inserirElementoNoInicio(struct linkedlist* lista, int valor) {
-    //TODO
+    struct no* tmp = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+        lista->cabeca = tmp->prox;
+    } else {
+        tmp->prox = lista->cabeca;
+        lista->cabeca = tmp;
+    }
+    
 }
 
 void inserirElementoEmPosicao(struct linkedlist* lista, int valor, int posicao) {
-    //TODO
+    struct no* tmp = alocarNovoNo(valor);
+    struct no* aux = lista->cabeca;
+    for (int i = 0; i < posicao - 2; i++) {
+        aux = aux->prox;
+    }
+    tmp->prox = aux->prox;
+    aux->prox = tmp;
 }
 
 int obterElementoEmPosicao(struct linkedlist* lista, int posicao) {
-    //TODO
+    struct no* aux = lista->cabeca;
+    for (int i = 0; i < posicao - 2; i++) {
+        aux = aux->prox;
+    }
+    return aux->val;
 }
 
 void removerElementoEmPosicao(struct linkedlist* lista, int posicao) {
@@ -43,7 +75,7 @@ void imprimirLista(struct linkedlist* lista) {
     //usamos o aux para percorrer a lista
     if (lista->cabeca != NULL) {
         struct no* aux = lista->cabeca;
-        //navega partindo da cabeça até chegar NULL
+        //navega partindo da cabeï¿½a atï¿½ chegar NULL
         printf("[");
         do {
             printf("%d", aux->val);
@@ -55,6 +87,6 @@ void imprimirLista(struct linkedlist* lista) {
         printf("]");
     }
     else {
-        printf("A lista está vazia!");
+        printf("A lista estï¿½ vazia!");
     }
 }

@@ -1,13 +1,22 @@
 #include <stdlib.h>
 #include <stdio.h>
 
-struct no{
+struct no {
     int val;
     struct no *prox;
 };
 
 void imprimirLista(struct no **cabeca){
-	//TODO
+	if (*cabeca != NULL) {
+		struct no *aux = (*cabeca);
+		do {
+			printf("%d\n", aux->val);
+			aux = aux->prox;
+		} while(aux != NULL);
+		printf("]");
+	} else {
+        printf("A lista está vazia.");
+    }
 }
 
 struct no* alocarNovoNo(int valor){

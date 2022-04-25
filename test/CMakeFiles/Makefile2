@@ -53,8 +53,8 @@ CMAKE_BINARY_DIR = /home/paulovictorfds/Projects/edi/test
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
+all: CMakeFiles/runTestsLinkedList2.dir/all
 all: CMakeFiles/runTestsArrayList2.dir/all
-all: CMakeFiles/runTestsArrayList.dir/all
 
 .PHONY : all
 
@@ -64,10 +64,37 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
+clean: CMakeFiles/runTestsLinkedList2.dir/clean
 clean: CMakeFiles/runTestsArrayList2.dir/clean
-clean: CMakeFiles/runTestsArrayList.dir/clean
 
 .PHONY : clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/runTestsLinkedList2.dir
+
+# All Build rule for target.
+CMakeFiles/runTestsLinkedList2.dir/all:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/depend
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=3,4 "Built target runTestsLinkedList2"
+.PHONY : CMakeFiles/runTestsLinkedList2.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/runTestsLinkedList2.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulovictorfds/Projects/edi/test/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runTestsLinkedList2.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulovictorfds/Projects/edi/test/CMakeFiles 0
+.PHONY : CMakeFiles/runTestsLinkedList2.dir/rule
+
+# Convenience name for target.
+runTestsLinkedList2: CMakeFiles/runTestsLinkedList2.dir/rule
+
+.PHONY : runTestsLinkedList2
+
+# clean rule for target.
+CMakeFiles/runTestsLinkedList2.dir/clean:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/clean
+.PHONY : CMakeFiles/runTestsLinkedList2.dir/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/runTestsArrayList2.dir
@@ -76,7 +103,7 @@ clean: CMakeFiles/runTestsArrayList.dir/clean
 CMakeFiles/runTestsArrayList2.dir/all:
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/depend
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=3,4 "Built target runTestsArrayList2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=1,2 "Built target runTestsArrayList2"
 .PHONY : CMakeFiles/runTestsArrayList2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -95,33 +122,6 @@ runTestsArrayList2: CMakeFiles/runTestsArrayList2.dir/rule
 CMakeFiles/runTestsArrayList2.dir/clean:
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/clean
 .PHONY : CMakeFiles/runTestsArrayList2.dir/clean
-
-#=============================================================================
-# Target rules for target CMakeFiles/runTestsArrayList.dir
-
-# All Build rule for target.
-CMakeFiles/runTestsArrayList.dir/all:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/depend
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=1,2 "Built target runTestsArrayList"
-.PHONY : CMakeFiles/runTestsArrayList.dir/all
-
-# Build rule for subdir invocation for target.
-CMakeFiles/runTestsArrayList.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulovictorfds/Projects/edi/test/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/runTestsArrayList.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/paulovictorfds/Projects/edi/test/CMakeFiles 0
-.PHONY : CMakeFiles/runTestsArrayList.dir/rule
-
-# Convenience name for target.
-runTestsArrayList: CMakeFiles/runTestsArrayList.dir/rule
-
-.PHONY : runTestsArrayList
-
-# clean rule for target.
-CMakeFiles/runTestsArrayList.dir/clean:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/clean
-.PHONY : CMakeFiles/runTestsArrayList.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

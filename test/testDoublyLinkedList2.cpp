@@ -2,9 +2,9 @@
 #include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/doublylinkedlist2.h"
+#include "../src/listas/doublylinkedlist2.h"
 #include <math.h>
 
 class DoublyLinkedListTest2 : public ::testing::Test {
@@ -108,7 +108,7 @@ TEST_F(DoublyLinkedListTest2, InsercaoEmPosicaoInicio) {
 	EXPECT_EQ(lista->cauda->val, 0);
 }
 
-//obterElementoEmPosicao já foi testado em todos os casos de teste
+//obterElementoEmPosicao jï¿½ foi testado em todos os casos de teste
 
 TEST_F(DoublyLinkedListTest2, RemocaoFim) {
 	int numElementos = 5;

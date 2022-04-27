@@ -111,6 +111,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named runTestsDoublyLinkedList2
+
+# Build rule for target.
+runTestsDoublyLinkedList2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTestsDoublyLinkedList2
+.PHONY : runTestsDoublyLinkedList2
+
+# fast build rule for target.
+runTestsDoublyLinkedList2/fast:
+	$(MAKE) -f CMakeFiles/runTestsDoublyLinkedList2.dir/build.make CMakeFiles/runTestsDoublyLinkedList2.dir/build
+.PHONY : runTestsDoublyLinkedList2/fast
+
+#=============================================================================
+# Target rules for targets named runTestsLinkedList2
+
+# Build rule for target.
+runTestsLinkedList2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTestsLinkedList2
+.PHONY : runTestsLinkedList2
+
+# fast build rule for target.
+runTestsLinkedList2/fast:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/build
+.PHONY : runTestsLinkedList2/fast
+
+#=============================================================================
 # Target rules for targets named runTestsArrayList2
 
 # Build rule for target.
@@ -122,46 +148,6 @@ runTestsArrayList2: cmake_check_build_system
 runTestsArrayList2/fast:
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/build
 .PHONY : runTestsArrayList2/fast
-
-#=============================================================================
-# Target rules for targets named runTestsArrayList
-
-# Build rule for target.
-runTestsArrayList: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 runTestsArrayList
-.PHONY : runTestsArrayList
-
-# fast build rule for target.
-runTestsArrayList/fast:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/build
-.PHONY : runTestsArrayList/fast
-
-testArrayList.o: testArrayList.cpp.o
-
-.PHONY : testArrayList.o
-
-# target to build an object file
-testArrayList.cpp.o:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/testArrayList.cpp.o
-.PHONY : testArrayList.cpp.o
-
-testArrayList.i: testArrayList.cpp.i
-
-.PHONY : testArrayList.i
-
-# target to preprocess a source file
-testArrayList.cpp.i:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/testArrayList.cpp.i
-.PHONY : testArrayList.cpp.i
-
-testArrayList.s: testArrayList.cpp.s
-
-.PHONY : testArrayList.s
-
-# target to generate assembly for a file
-testArrayList.cpp.s:
-	$(MAKE) -f CMakeFiles/runTestsArrayList.dir/build.make CMakeFiles/runTestsArrayList.dir/testArrayList.cpp.s
-.PHONY : testArrayList.cpp.s
 
 testArrayList2.o: testArrayList2.cpp.o
 
@@ -190,6 +176,60 @@ testArrayList2.cpp.s:
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/testArrayList2.cpp.s
 .PHONY : testArrayList2.cpp.s
 
+testDoublyLinkedList2.o: testDoublyLinkedList2.cpp.o
+
+.PHONY : testDoublyLinkedList2.o
+
+# target to build an object file
+testDoublyLinkedList2.cpp.o:
+	$(MAKE) -f CMakeFiles/runTestsDoublyLinkedList2.dir/build.make CMakeFiles/runTestsDoublyLinkedList2.dir/testDoublyLinkedList2.cpp.o
+.PHONY : testDoublyLinkedList2.cpp.o
+
+testDoublyLinkedList2.i: testDoublyLinkedList2.cpp.i
+
+.PHONY : testDoublyLinkedList2.i
+
+# target to preprocess a source file
+testDoublyLinkedList2.cpp.i:
+	$(MAKE) -f CMakeFiles/runTestsDoublyLinkedList2.dir/build.make CMakeFiles/runTestsDoublyLinkedList2.dir/testDoublyLinkedList2.cpp.i
+.PHONY : testDoublyLinkedList2.cpp.i
+
+testDoublyLinkedList2.s: testDoublyLinkedList2.cpp.s
+
+.PHONY : testDoublyLinkedList2.s
+
+# target to generate assembly for a file
+testDoublyLinkedList2.cpp.s:
+	$(MAKE) -f CMakeFiles/runTestsDoublyLinkedList2.dir/build.make CMakeFiles/runTestsDoublyLinkedList2.dir/testDoublyLinkedList2.cpp.s
+.PHONY : testDoublyLinkedList2.cpp.s
+
+testLinkedList2.o: testLinkedList2.cpp.o
+
+.PHONY : testLinkedList2.o
+
+# target to build an object file
+testLinkedList2.cpp.o:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o
+.PHONY : testLinkedList2.cpp.o
+
+testLinkedList2.i: testLinkedList2.cpp.i
+
+.PHONY : testLinkedList2.i
+
+# target to preprocess a source file
+testLinkedList2.cpp.i:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.i
+.PHONY : testLinkedList2.cpp.i
+
+testLinkedList2.s: testLinkedList2.cpp.s
+
+.PHONY : testLinkedList2.s
+
+# target to generate assembly for a file
+testLinkedList2.cpp.s:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.s
+.PHONY : testLinkedList2.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -198,14 +238,18 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+	@echo "... runTestsDoublyLinkedList2"
+	@echo "... runTestsLinkedList2"
 	@echo "... runTestsArrayList2"
-	@echo "... runTestsArrayList"
-	@echo "... testArrayList.o"
-	@echo "... testArrayList.i"
-	@echo "... testArrayList.s"
 	@echo "... testArrayList2.o"
 	@echo "... testArrayList2.i"
 	@echo "... testArrayList2.s"
+	@echo "... testDoublyLinkedList2.o"
+	@echo "... testDoublyLinkedList2.i"
+	@echo "... testDoublyLinkedList2.s"
+	@echo "... testLinkedList2.o"
+	@echo "... testLinkedList2.i"
+	@echo "... testLinkedList2.s"
 .PHONY : help
 
 

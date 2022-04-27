@@ -1,4 +1,5 @@
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/rebuild_cache.dir
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/edit_cache.dir
+/home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsDoublyLinkedList2.dir
+/home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsLinkedList2.dir
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsArrayList2.dir
-/home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsArrayList.dir

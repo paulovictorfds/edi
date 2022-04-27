@@ -1,0 +1,20 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+/home/paulovictorfds/Projects/edi/test/gtest/gtest.h
+
+/home/paulovictorfds/Projects/edi/test/testLinkedList.cpp
+pch.h
+/home/paulovictorfds/Projects/edi/test/pch.h
+../src/listas/bibliotecas/linkedlist.h
+/home/paulovictorfds/Projects/edi/src/listas/bibliotecas/linkedlist.h
+math.h
+-
+

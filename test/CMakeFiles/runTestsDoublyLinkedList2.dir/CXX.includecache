@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/paulovictorfds/Projects/edi/src/listas/doublylinkedlist2.h
+stdlib.h
+-
+stdio.h
+-
+
+/home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+/home/paulovictorfds/Projects/edi/test/gtest/gtest.h
+
+/home/paulovictorfds/Projects/edi/test/testDoublyLinkedList2.cpp
+pch.h
+/home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+-
+../src/listas/doublylinkedlist2.h
+/home/paulovictorfds/Projects/edi/src/listas/doublylinkedlist2.h
+math.h
+-
+

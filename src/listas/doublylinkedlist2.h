@@ -14,27 +14,101 @@ struct doublylinkedlist {
 };
 
 struct doublylinkedlist* inicializar() {
-   //TODO
+   struct doublylinkedlist* lista = (struct doublylinkedlist*)malloc(sizeof(struct doublylinkedlist));
+   lista->qtdade = 0;
+   lista->cauda = NULL;
+   lista->cabeca = NULL;
+   return lista;   
 }
 
 struct no* alocarNovoNo(int valor){
-    //TODO
+    struct no* node = (struct no*)malloc(sizeof(no));
+    node->val = valor;
+    node->ant = NULL;
+    node->prox = NULL;
+    return node;
 }
 
 void inserirElementoNoInicio(struct doublylinkedlist* lista, int valor){
-    //TODO
+    struct no* tmp = lista->cabeca;
+    struct no* node = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+       lista->cabeca = node;
+       lista->cauda = node;
+    } else {
+        node->prox = tmp;
+        tmp->ant = node;
+        lista->cabeca = node;
+    }
+    lista->qtdade++;
 }
 
 void inserirElementoNoFim(struct doublylinkedlist* lista, int valor){
-    //TODO
+    struct no* tmp = lista->cauda;
+    struct no* node = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+       lista->cabeca = node;
+       lista->cauda = node;
+    } else {
+        node->ant = tmp;
+        lista->cauda = node;
+        tmp->prox = node;        
+    }
+    lista->qtdade++;
 }
 
 void inserirElementoEmPosicao(struct doublylinkedlist* lista, int valor, int posicao){
-    //TODO
+    struct no* node = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+        lista->cabeca = node;
+        lista->cauda = node;
+        lista->qtdade++;
+    } else {
+        if (posicao == 0) {
+            inserirElementoNoInicio(lista, valor);
+        } else if (posicao == lista->qtdade -  1) {
+            inserirElementoNoFim(lista, valor);
+        } else {
+            if (posicao > lista->qtdade / 2) {
+                struct no* tmp = lista->cauda;                
+                for (int i = lista->qtdade - 1; i > posicao; i--) {
+                    tmp = tmp->ant;
+                }
+                struct no* aux = tmp->ant;                
+                tmp->ant = node;
+                node->prox = tmp;
+                aux->prox = node;
+                node->ant = aux;
+            } else {
+                struct no* tmp = lista->cabeca;
+                for (int i = 0; i < posicao; i++) {
+                    tmp = tmp->prox;
+                }
+                struct no* aux = tmp->prox; 
+                node->prox = tmp->prox;
+                aux->ant = node;
+                node->ant = tmp;
+                tmp->prox = node;
+            }
+            lista->qtdade++;
+        }
+    }    
 }
 
 int obterElementoEmPosicao(struct doublylinkedlist* lista, int posicao){
-    //TODO
+    if (posicao > lista->qtdade / 2) {
+        struct no* tmp = lista->cauda;
+        for (int i = lista->qtdade - 1; i > posicao; i--) {
+            tmp = tmp->ant;
+        }
+        return tmp->val;
+    } else {
+        struct no* tmp = lista->cabeca;
+        for (int i = 0; i < posicao; i++) {
+            tmp = tmp->prox;
+        }
+        return tmp->val;
+    }
 }
 
 void removerElementoEmPosicao(struct doublylinkedlist* lista, int posicao){

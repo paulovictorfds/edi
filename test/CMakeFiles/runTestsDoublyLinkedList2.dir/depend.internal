@@ -3,4 +3,8 @@
 
 CMakeFiles/runTestsDoublyLinkedList2.dir/testDoublyLinkedList2.cpp.o
  /home/paulovictorfds/Projects/edi/src/listas/doublylinkedlist2.h
+<<<<<<< HEAD
+=======
+ /home/paulovictorfds/Projects/edi/test/pch.h
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
  /home/paulovictorfds/Projects/edi/test/testDoublyLinkedList2.cpp

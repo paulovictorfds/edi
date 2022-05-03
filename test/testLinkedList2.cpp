@@ -1,5 +1,5 @@
 //Para Windows (MS Visual Studio):
-#include "pch.h"
+// #include "pch.h"
 
 //Para Linux:
 #include <gtest/gtest.h>

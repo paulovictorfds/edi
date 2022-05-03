@@ -1,6 +1,9 @@
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/rebuild_cache.dir
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/edit_cache.dir
+<<<<<<< HEAD
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsArrayStack2.dir
+=======
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsDoublyLinkedList2.dir
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsLinkedList2.dir
 /home/paulovictorfds/Projects/edi/test/CMakeFiles/runTestsArrayList2.dir

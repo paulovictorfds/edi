@@ -12,7 +12,17 @@ stdlib.h
 stdio.h
 -
 
+<<<<<<< HEAD
 /home/paulovictorfds/Projects/edi/test/testDoublyLinkedList2.cpp
+=======
+/home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+/home/paulovictorfds/Projects/edi/test/gtest/gtest.h
+
+/home/paulovictorfds/Projects/edi/test/testDoublyLinkedList2.cpp
+pch.h
+/home/paulovictorfds/Projects/edi/test/pch.h
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 gtest/gtest.h
 -
 ../src/listas/doublylinkedlist2.h

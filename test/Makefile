@@ -111,6 +111,7 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+<<<<<<< HEAD
 # Target rules for targets named runTestsArrayStack2
 
 # Build rule for target.
@@ -149,6 +150,33 @@ runTestsLinkedList2/fast:
 	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/build
 .PHONY : runTestsLinkedList2/fast
 
+=======
+# Target rules for targets named runTestsDoublyLinkedList2
+
+# Build rule for target.
+runTestsDoublyLinkedList2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTestsDoublyLinkedList2
+.PHONY : runTestsDoublyLinkedList2
+
+# fast build rule for target.
+runTestsDoublyLinkedList2/fast:
+	$(MAKE) -f CMakeFiles/runTestsDoublyLinkedList2.dir/build.make CMakeFiles/runTestsDoublyLinkedList2.dir/build
+.PHONY : runTestsDoublyLinkedList2/fast
+
+#=============================================================================
+# Target rules for targets named runTestsLinkedList2
+
+# Build rule for target.
+runTestsLinkedList2: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 runTestsLinkedList2
+.PHONY : runTestsLinkedList2
+
+# fast build rule for target.
+runTestsLinkedList2/fast:
+	$(MAKE) -f CMakeFiles/runTestsLinkedList2.dir/build.make CMakeFiles/runTestsLinkedList2.dir/build
+.PHONY : runTestsLinkedList2/fast
+
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 #=============================================================================
 # Target rules for targets named runTestsArrayList2
 
@@ -189,6 +217,7 @@ testArrayList2.cpp.s:
 	$(MAKE) -f CMakeFiles/runTestsArrayList2.dir/build.make CMakeFiles/runTestsArrayList2.dir/testArrayList2.cpp.s
 .PHONY : testArrayList2.cpp.s
 
+<<<<<<< HEAD
 testArrayStack2.o: testArrayStack2.cpp.o
 
 .PHONY : testArrayStack2.o
@@ -216,6 +245,8 @@ testArrayStack2.cpp.s:
 	$(MAKE) -f CMakeFiles/runTestsArrayStack2.dir/build.make CMakeFiles/runTestsArrayStack2.dir/testArrayStack2.cpp.s
 .PHONY : testArrayStack2.cpp.s
 
+=======
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 testDoublyLinkedList2.o: testDoublyLinkedList2.cpp.o
 
 .PHONY : testDoublyLinkedList2.o
@@ -278,16 +309,22 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
+<<<<<<< HEAD
 	@echo "... runTestsArrayStack2"
+=======
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 	@echo "... runTestsDoublyLinkedList2"
 	@echo "... runTestsLinkedList2"
 	@echo "... runTestsArrayList2"
 	@echo "... testArrayList2.o"
 	@echo "... testArrayList2.i"
 	@echo "... testArrayList2.s"
+<<<<<<< HEAD
 	@echo "... testArrayStack2.o"
 	@echo "... testArrayStack2.i"
 	@echo "... testArrayStack2.s"
+=======
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 	@echo "... testDoublyLinkedList2.o"
 	@echo "... testDoublyLinkedList2.i"
 	@echo "... testDoublyLinkedList2.s"

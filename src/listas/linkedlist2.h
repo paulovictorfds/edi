@@ -19,27 +19,43 @@ struct linkedlist* inicializar() {
 }
 
 struct no* alocarNovoNo(int valor) {
+<<<<<<< HEAD
     struct no* node = (struct no*)malloc(sizeof(struct no));
+=======
+    struct no* node = (struct no*)malloc(sizeof(struct no));    
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
     node->val = valor;
     node->prox = NULL;
     return node;
 }
 
 void inserirElementoNoFim(struct linkedlist* lista, int valor) {
+<<<<<<< HEAD
     struct no* node = alocarNovoNo(valor);    
     if (lista->qtdade == 0) {
         lista->cabeca = node;
     } else {
+=======
+    struct no* node = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+       lista->cabeca = node;
+    } else if (lista->qtdade > 0) {
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
         struct no* aux = lista->cabeca;
         while (aux->prox != NULL) {
             aux = aux->prox;
         }
+<<<<<<< HEAD
         aux->prox = node;
+=======
+        aux->prox = node;        
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
     }
     lista->qtdade++;
 }
 
 void inserirElementoNoInicio(struct linkedlist* lista, int valor) {
+<<<<<<< HEAD
     struct no* node = alocarNovoNo(valor);
     if (lista->qtdade == 0) {
         lista->cabeca = node;
@@ -48,6 +64,17 @@ void inserirElementoNoInicio(struct linkedlist* lista, int valor) {
         lista->cabeca = node;
     }
     lista->qtdade++;
+=======
+    struct no* tmp = lista->cabeca;
+    struct no* node = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+       lista->cabeca = node;
+    } else {
+        node->prox = tmp;
+        lista->cabeca = node;
+    }
+    lista->qtdade++;   
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 }
 
 void inserirElementoEmPosicao(struct linkedlist* lista, int valor, int posicao) {
@@ -55,6 +82,7 @@ void inserirElementoEmPosicao(struct linkedlist* lista, int valor, int posicao) 
     if (lista->qtdade == 0) {
         lista->cabeca = novoNo;
         lista->qtdade++;
+<<<<<<< HEAD
     } else {
         if (posicao == 0) {
             inserirElementoNoInicio(lista, valor);
@@ -70,6 +98,21 @@ void inserirElementoEmPosicao(struct linkedlist* lista, int valor, int posicao) 
             lista->qtdade++;
         }      
     }        
+=======
+    } else if (posicao == 0) {
+        inserirElementoNoInicio(lista, valor); 
+    } else {
+        struct no* aux = lista->cabeca;
+        struct no* aux2;
+        for (int i = 0; i < (posicao - 1); i++) {
+            aux = aux->prox;
+        }
+        aux2 = aux->prox;
+        aux->prox = novoNo;
+        novoNo->prox = aux2;
+        lista->qtdade++;
+    }    
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 }
 
 int obterElementoEmPosicao(struct linkedlist* lista, int posicao) {
@@ -81,6 +124,7 @@ int obterElementoEmPosicao(struct linkedlist* lista, int posicao) {
 }
 
 void removerElementoEmPosicao(struct linkedlist* lista, int posicao) {
+<<<<<<< HEAD
     struct no* tmp = lista->cabeca;
     if (posicao == 0) {
         lista->cabeca = tmp->prox;
@@ -92,6 +136,20 @@ void removerElementoEmPosicao(struct linkedlist* lista, int posicao) {
         struct no* aux = tmp->prox;
         tmp->prox = aux->prox;
         free(aux);
+=======
+    struct no* aux = lista->cabeca;
+    struct no* aux2;
+    if (posicao == 0) {
+        lista->cabeca = aux->prox;
+    } else {
+        for (int i = 0; i < posicao; i++) {        
+            if (i == posicao - 1) {
+                aux2 = aux;
+            }
+            aux = aux->prox;
+        }
+        aux2->prox = aux->prox;
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
     }
     lista->qtdade--;
 }

@@ -1,5 +1,5 @@
 #include "pch.h"
-#include "../src/listas/bibliotecas/doublylinkedlist.h"
+#include "../src/listas/doublylinkedlist.h"
 #include <math.h>
 
 
@@ -86,7 +86,7 @@ TEST_F(DoublyLinkedListTest, InsercaoEmPosicaoInicio) {
 	}
 }
 
-//obterElementoEmPosicao já foi testado em todos os casos de teste
+//obterElementoEmPosicao jï¿½ foi testado em todos os casos de teste
 
 TEST_F(DoublyLinkedListTest, RemocaoFim) {
 	int numElementos = 5;

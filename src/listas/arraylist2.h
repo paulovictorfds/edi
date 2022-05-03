@@ -19,7 +19,11 @@ int obterElementoEmPosicao(struct arraylist* lista, int posicao) {
     if (posicao >= 0 && posicao < lista->qtdade) {
         return lista->vetor[posicao];
     }
+<<<<<<< HEAD
     return 0;
+=======
+    return -1;
+>>>>>>> cc2a3745af9d889b4e36717d2ec1b80fb041011b
 }
 
 void duplicarCapacidade(struct arraylist* lista) {

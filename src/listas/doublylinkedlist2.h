@@ -14,31 +14,122 @@ struct doublylinkedlist {
 };
 
 struct doublylinkedlist* inicializar() {
-   //TODO
+   struct doublylinkedlist *lista = (struct doublylinkedlist*)malloc(sizeof(struct doublylinkedlist));
+   lista->cabeca = NULL;
+   lista->cauda = NULL;
+   lista->qtdade = 0;
+   return lista;
 }
 
 struct no* alocarNovoNo(int valor){
-    //TODO
+    struct no* node = (struct no*)malloc(sizeof(struct no));
+    node->ant = NULL;
+    node->prox = NULL;
+    node->val = valor;
+    return node;
 }
 
 void inserirElementoNoInicio(struct doublylinkedlist* lista, int valor){
-    //TODO
+    struct no* novoNo = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+        lista->cabeca = novoNo;
+        lista->cauda = novoNo;
+    } else {
+        lista->cabeca->ant = novoNo;
+        novoNo->prox = lista->cabeca;
+        lista->cabeca = novoNo;
+    }    
+    lista->qtdade++;
 }
 
 void inserirElementoNoFim(struct doublylinkedlist* lista, int valor){
-    //TODO
+    struct no* novoNo = alocarNovoNo(valor);
+    if (lista->qtdade == 0) {
+        lista->cabeca = novoNo;
+        lista->cauda = novoNo;
+    } else {
+        lista->cauda->prox = novoNo;
+        novoNo->ant = lista->cauda;        
+        lista->cauda = novoNo;
+    }    
+    lista->qtdade++;
 }
 
-void inserirElementoEmPosicao(struct doublylinkedlist* lista, int valor, int posicao){
-    //TODO
+void inserirElementoEmPosicao(struct doublylinkedlist* lista, int valor, int posicao) {    
+    if (lista->qtdade == 0) {
+        struct no* novoNo = alocarNovoNo(valor);
+        lista->cabeca = novoNo;
+        lista->cauda = novoNo;
+        lista->qtdade++;
+        printf("Inseriu valor %d em posicao %d (qtd=0)\n", valor, posicao);
+    } else {
+        if (posicao == 0) {
+            printf("Inseriu valor %d em posicao %d (comeco)\n", valor, posicao);
+            inserirElementoNoInicio(lista, valor);            
+        } else if (posicao == lista->qtdade) {
+            printf("Inseriu valor %d em posicao %d (fim)\n", valor, posicao);
+            inserirElementoNoFim(lista, valor);            
+        } 
+        else {
+            struct no* novoNo = alocarNovoNo(valor);
+            if (posicao < lista->qtdade / 2) {
+                struct no* tmp = lista->cabeca;
+                for (int i = 0; i < posicao - 1; i++) {
+                    tmp = tmp->prox;
+                }
+                novoNo->prox = tmp->prox;
+                novoNo->ant = tmp;
+                tmp->prox = novoNo;
+                printf("Inseriu valor %d em posicao %d (cabeca)\n", valor, posicao);
+            } else {
+                struct no* tmp = lista->cauda;
+                for (int i = lista->qtdade - 1; i > posicao; i--) {
+                    tmp = tmp->ant;
+                }
+                novoNo->prox = tmp->prox;
+                novoNo->ant = tmp->ant;
+                (tmp->ant)->prox = novoNo;
+                printf("Inseriu valor %d em posicao %d (cauda)\n", valor, posicao);
+            }
+            lista->qtdade++;
+        }      
+    }
 }
 
 int obterElementoEmPosicao(struct doublylinkedlist* lista, int posicao){
-    //TODO
+    if (lista->qtdade <= 0) {
+        printf("Lista vazia!\n");
+        return -1;
+    }
+    if (posicao < lista->qtdade / 2) {
+        struct no* tmp = lista->cabeca;
+        for (int i = 0; i < posicao; i++) {
+            tmp = tmp->prox;
+        }
+        printf("Obteve valor %d em posicao %d (cabeca)\n", tmp->val, posicao);
+        return tmp->val;
+    } else {
+        struct no* tmp = lista->cauda;
+        for (int i = lista->qtdade - 1; i > posicao; i--) {
+            tmp = tmp->ant;
+        }
+        printf("Obteve valor %d em posicao %d (cauda)\n", tmp->val, posicao);
+        return tmp->val;
+    }
 }
 
 void removerElementoEmPosicao(struct doublylinkedlist* lista, int posicao){
-    //TODO
+    struct no* tmp = lista->cabeca;
+    if (posicao == 0) {
+        lista->cabeca = lista->cabeca->prox;
+    } else {        
+        for (int i = 0; i < posicao - 1; i++) {
+            tmp = tmp->prox;
+        }
+        struct no* aux = tmp->prox;
+        tmp->prox = aux->prox;
+    }
+    lista->qtdade--;
 }
 
 void imprimirLista(struct no** cabeca) {

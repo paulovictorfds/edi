@@ -53,6 +53,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
+  "CMakeFiles/runTestsArrayStack2.dir/DependInfo.cmake"
+  "CMakeFiles/runTestsDoublyLinkedList2.dir/DependInfo.cmake"
   "CMakeFiles/runTestsLinkedList2.dir/DependInfo.cmake"
   "CMakeFiles/runTestsArrayList2.dir/DependInfo.cmake"
   )

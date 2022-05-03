@@ -57,27 +57,27 @@ include CMakeFiles/runTestsLinkedList2.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/runTestsLinkedList2.dir/flags.make
 
-CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o: CMakeFiles/runTestsLinkedList2.dir/flags.make
-CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o: testLinkedList.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o -c /home/paulovictorfds/Projects/edi/test/testLinkedList.cpp
+CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o: CMakeFiles/runTestsLinkedList2.dir/flags.make
+CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o: testLinkedList2.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/paulovictorfds/Projects/edi/test/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o -c /home/paulovictorfds/Projects/edi/test/testLinkedList2.cpp
 
-CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulovictorfds/Projects/edi/test/testLinkedList.cpp > CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.i
+CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/paulovictorfds/Projects/edi/test/testLinkedList2.cpp > CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.i
 
-CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulovictorfds/Projects/edi/test/testLinkedList.cpp -o CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.s
+CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/paulovictorfds/Projects/edi/test/testLinkedList2.cpp -o CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.s
 
 # Object files for target runTestsLinkedList2
 runTestsLinkedList2_OBJECTS = \
-"CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o"
+"CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o"
 
 # External object files for target runTestsLinkedList2
 runTestsLinkedList2_EXTERNAL_OBJECTS =
 
-runTestsLinkedList2: CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o
+runTestsLinkedList2: CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o
 runTestsLinkedList2: CMakeFiles/runTestsLinkedList2.dir/build.make
 runTestsLinkedList2: /usr/lib/x86_64-linux-gnu/libgtest.a
 runTestsLinkedList2: CMakeFiles/runTestsLinkedList2.dir/link.txt

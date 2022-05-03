@@ -2,9 +2,9 @@
 #include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/pilhas/bibliotecas/arraystack2.h"
+#include "../src/pilhas/arraystack2.h"
 
 class ArrayStackTest2 : public ::testing::Test {
 protected:
@@ -62,13 +62,13 @@ TEST_F(ArrayStackTest2, EmpilhamentoDobrandoCapacidade) {
 TEST_F(ArrayStackTest2, DesempilhamentoPilhaNula) {
 	TearDown(); 
 	
-	EXPECT_EQ(desempilharRetornando(pilha), INT_MIN);
+	EXPECT_EQ(desempilharRetornando(pilha), INT8_MIN);
 }
 
 TEST_F(ArrayStackTest2, DesempilhamentoPilhaVazia) {
 	desempilhar(pilha);
 	EXPECT_EQ(pilha->qtdade, 0);
-	EXPECT_EQ(desempilharRetornando(pilha), INT_MIN);
+	EXPECT_EQ(desempilharRetornando(pilha), INT8_MIN);
 }
 
 TEST_F(ArrayStackTest2, DesempilhamentoPilhaNaoVazia) {
@@ -86,11 +86,11 @@ TEST_F(ArrayStackTest2, DesempilhamentoPilhaNaoVazia) {
 TEST_F(ArrayStackTest2, TopoPilhaNula) {
 	TearDown();
 
-	EXPECT_EQ(topo(pilha), INT_MIN);
+	EXPECT_EQ(topo(pilha), INT8_MIN);
 }
 
 TEST_F(ArrayStackTest2, TopoPilhaVazia) {
-	EXPECT_EQ(topo(pilha), INT_MIN);
+	EXPECT_EQ(topo(pilha), INT8_MIN);
 }
 
 TEST_F(ArrayStackTest2, TopoPilhaNaoVazia) {

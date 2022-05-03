@@ -6,17 +6,23 @@
 
 #IncludeRegexTransform: 
 
-/home/paulovictorfds/Projects/edi/src/listas/linkedlist.h
+/home/paulovictorfds/Projects/edi/src/listas/linkedlist2.h
 stdlib.h
 -
 stdio.h
 -
 
-/home/paulovictorfds/Projects/edi/test/testLinkedList.cpp
+/home/paulovictorfds/Projects/edi/test/pch.h
+gtest/gtest.h
+/home/paulovictorfds/Projects/edi/test/gtest/gtest.h
+
+/home/paulovictorfds/Projects/edi/test/testLinkedList2.cpp
+pch.h
+/home/paulovictorfds/Projects/edi/test/pch.h
 gtest/gtest.h
 -
-../src/listas/linkedlist.h
-/home/paulovictorfds/Projects/edi/src/listas/linkedlist.h
+../src/listas/linkedlist2.h
+/home/paulovictorfds/Projects/edi/src/listas/linkedlist2.h
 math.h
 -
 

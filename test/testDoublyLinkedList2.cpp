@@ -1,10 +1,10 @@
 //Para Windows (MS Visual Studio):
-#include "pch.h"
+//#include "pch.h"
 
 //Para Linux:
-//#include <gtest/gtest.h>
+#include <gtest/gtest.h>
 
-#include "../src/listas/bibliotecas/doublylinkedlist2.h"
+#include "../src/listas/doublylinkedlist2.h"
 #include <math.h>
 
 class DoublyLinkedListTest2 : public ::testing::Test {
@@ -69,11 +69,11 @@ TEST_F(DoublyLinkedListTest2, InsercaoListaNaoVaziaInicio) {
 
 TEST_F(DoublyLinkedListTest2, InsercaoEmPosicaoFim) {
 	int numElementos = 100;
-	for (int i = 0; i < numElementos; i++) {
+	for (int i = 0; i < numElementos; i++) {		
 		inserirElementoEmPosicao(lista, i, i);
 	}
 	EXPECT_EQ(lista->qtdade, numElementos);
-	for (int i = 0; i < numElementos; i++) {
+	for (int i = 0; i < numElementos; i++) {		
 		EXPECT_EQ(obterElementoEmPosicao(lista, i), i);
 	}
 	EXPECT_EQ(lista->cabeca->val, 0);
@@ -108,7 +108,7 @@ TEST_F(DoublyLinkedListTest2, InsercaoEmPosicaoInicio) {
 	EXPECT_EQ(lista->cauda->val, 0);
 }
 
-//obterElementoEmPosicao já foi testado em todos os casos de teste
+//obterElementoEmPosicao jï¿½ foi testado em todos os casos de teste
 
 TEST_F(DoublyLinkedListTest2, RemocaoFim) {
 	int numElementos = 5;

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/runTestsDoublyLinkedList2.dir/testDoublyLinkedList2.cpp.o  -o runTestsDoublyLinkedList2  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/runTestsArrayStack2.dir/testArrayStack2.cpp.o  -o runTestsArrayStack2  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

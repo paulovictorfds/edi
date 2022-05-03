@@ -1,1 +1,1 @@
-/usr/bin/c++    -rdynamic CMakeFiles/runTestsLinkedList2.dir/testLinkedList.cpp.o  -o runTestsLinkedList2  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/runTestsLinkedList2.dir/testLinkedList2.cpp.o  -o runTestsLinkedList2  -Wl,-Bstatic -lgtest -Wl,-Bdynamic -lpthread 

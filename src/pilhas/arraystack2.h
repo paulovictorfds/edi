@@ -9,38 +9,61 @@ struct arraystack {
 };
 
 struct arraystack* inicializar(int tamArray){
-    //TODO
+    struct arraystack* pilha = (struct arraystack*)malloc(sizeof(arraystack));
+    pilha->elementos = (int*)calloc(tamArray, sizeof(int));
+    pilha->tamanho = tamArray;
+    pilha->qtdade = 0;
+    return pilha;
 }
 
 void duplicarCapacidade(struct arraystack* pilha){
-    //TODO
+    pilha->elementos = (int*)realloc(pilha->elementos, 2 * pilha->tamanho * sizeof(int));
+    pilha->tamanho = 2 * pilha->tamanho;
 }
 
 //se a pilha estiver nula, instancie a pilha com tamanho 10
 //por causa da possibilidade de instanciacao usamos struct arraystack**
 //se a pilha encher, duplique a capacidade do array
 void empilhar(struct arraystack** pilha, int valor){
-    //TODO
+    if ((*pilha) == NULL) {
+        *pilha = inicializar(10);
+    }
+    (*pilha)->elementos[(*pilha)->qtdade] = valor;
+    (*pilha)->qtdade++;
 }
 
 //retornar true se a pilha for nula ou vazia
 bool vazia(struct arraystack* pilha) {
-    //TODO
+    if (pilha->qtdade == 0) {
+        return true;
+    }
+    return false;
 }
 
-//decrementar qtdade se a pilha não estiver nula ou vazia
+//decrementar qtdade se a pilha nï¿½o estiver nula ou vazia
 void desempilhar(struct arraystack* pilha){
-    //TODO
+    if (pilha->qtdade > 0 || pilha != NULL) {
+        pilha->qtdade--;
+    }
 }
 
 //retorne a constante INT_MIN se a pilha for nula ou vazia
 int desempilharRetornando(struct arraystack* pilha){
-    //TODO
+    if (pilha->qtdade == 0 || pilha == NULL) {
+        return INT8_MIN;
+    } else {
+        pilha->qtdade--;
+        return pilha->elementos[pilha->qtdade];        
+    }
 }
 
 //retorne a constante INT_MIN se a pilha for nula ou vazia
 int topo(struct arraystack* pilha){
-    //TODO
+    if (pilha->qtdade == 0 || pilha == NULL) {
+        return INT8_MIN;
+    } else {
+        return pilha->elementos[pilha->qtdade - 1];
+    }    
 }
 
 void imprimir(struct arraystack* pilha){
